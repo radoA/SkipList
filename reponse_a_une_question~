@@ -1,0 +1,20 @@
+3.3 itérateur et recherche linéaire d'une valeur dans une liste.
+
+3.la différence en temps de calcul constatée, particulièrement pour le test numéro 4 est justifié par le fait que:
+
+dans le cas d'une liste doublement chainé: Pour rechercher une valeur avec l'ittérateur, on parcours toute la liste c'est à dire chaque noeud de la liste(ici la liste possède 10922 noeuds), 
+la complexité dans le pire de cas est O(1), c'est à dire que le premier noeud rencontré est celui que l'on recherche.
+
+la complexité moyenne est de l'ordre de O(n/2)
+
+la complexité maximale du parcours est O(n) avec n=10922
+
+
+Dans le cas d'une liste à raccourci, on n'a pas besoin de parcourir tous les noeuds de la liste, on parcours juste les noeuds de chaque niveau la sentinelle jusqu'a ce qu'on trouve la valeur recherché
+la complexité moyenne est ici de O(log(n)), c'est similaire à celui d'un arbre de recherche équilibré
+On ne peut être plus précis en terme de complexité minimale
+
+ps:
+utilisation de valgrind pour le test de mémoire:
+./valgrind --leak-check=yes ./skiplisttest -r 1
+
